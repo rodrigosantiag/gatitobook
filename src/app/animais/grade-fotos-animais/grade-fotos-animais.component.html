@@ -4,13 +4,14 @@
 
 <div class="row">
   <div *ngFor="let animal of animais" class="col-4">
-    <a [routerLink]="['/animais', animal.id]"></a>
-    <app-cartao>
-      <app-animal
-        [url]="animal.url"
-        [descricao]="animal.description"
-      ></app-animal>
-    </app-cartao>
+    <a [routerLink]="['/animais', animal.id]">
+      <app-cartao>
+        <app-animal
+          [url]="animal.url"
+          [descricao]="animal.description"
+        ></app-animal>
+      </app-cartao>
+    </a>
     <i aria-hidden="true" class="fa fa-heart-o fa-1x mr-2">{{
       animal.likes
     }}</i>
